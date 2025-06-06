@@ -79,6 +79,7 @@ class ReciboNominaActivity : AppCompatActivity() {
             }
         })
 
+
         btnLimpiar.setOnClickListener(View.OnClickListener {
             txtEmpleado.text = txtEmpleado.text
             subTot.text = "Subtotal"
