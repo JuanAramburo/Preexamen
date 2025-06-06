@@ -19,7 +19,8 @@
             android:text="@string/nombre"
             android:id="@+id/txtEmpleado"
             android:textAlignment="center"
-            android:paddingBottom="20sp">
+            android:paddingBottom="20sp"
+            android:textSize="30sp">
 
         </TextView>
 
@@ -29,7 +30,8 @@
             android:text="@string/recibo"
             android:textAlignment="center"
             android:id="@+id/lblRecibo"
-            android:paddingBottom="20sp">
+            android:paddingBottom="20sp"
+            android:textSize="30sp">
 
         </TextView>
 

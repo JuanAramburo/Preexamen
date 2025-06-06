@@ -47,7 +47,7 @@ class ReciboNominaActivity : AppCompatActivity() {
         btnLimpiar = findViewById(R.id.btnLimpiar) as Button
         btnRegresar = findViewById(R.id.btnRegresar) as Button
 
-        var strEmpleado: String = intent.getStringExtra("Nombre").toString()
+        var strEmpleado: String = intent.getStringExtra("Cliente").toString()
         txtEmpleado.text = strEmpleado.toString()
 
         var recibo: Int = abs(ReciboNomina().generarRecibo())
@@ -61,23 +61,26 @@ class ReciboNominaActivity : AppCompatActivity() {
             if (horasT.text.toString().isEmpty() || horasE.text.toString().isEmpty()){
                 Toast.makeText(this,"Falto capturar las horas trabajadas", Toast.LENGTH_SHORT).show()
             } else{
-                lblRecibo.text = reciboNomina.generarRecibo().toString()
                 reciboNomina.Nombre = txtEmpleado.text.toString()
                 reciboNomina.horasTrabNormal = horasT.text.toString().toFloat()
                 reciboNomina.horasTrabExtras = horasE.text.toString().toFloat()
 
-                if (Pue1.isChecked) reciboNomina.puesto = 12
-                if (Pue2.isChecked) reciboNomina.puesto = 24
-                if (Pue3.isChecked) reciboNomina.puesto = 36
+                reciboNomina.puesto = when {
+                    Pue1.isChecked -> 1
+                    Pue2.isChecked -> 2
+                    Pue3.isChecked -> 3
+                    else -> 0
+                }
 
-                subTot.text = "Subtotal" + ": " + reciboNomina.calcularSubtotal().toString()
-                impuesto.text = "Total a Financiar" + ": " + reciboNomina.calcularImpuestos().toString()
-                totalPag.text = "Pago Mensual" + ": " + reciboNomina.calcularTotal().toString()
+
+                subTot.text = "Subtotal: %.2f".format(reciboNomina.calcularSubtotal())
+                impuesto.text = "Impuesto: %.2f".format(reciboNomina.calcularImpuestos())
+                totalPag.text = "Total a pagar: %.2f".format(reciboNomina.calcularTotal())
             }
         })
 
         btnLimpiar.setOnClickListener(View.OnClickListener {
-            txtEmpleado.text = ""
+            txtEmpleado.text = txtEmpleado.text
             subTot.text = "Subtotal"
             impuesto.text = "Impuesto"
             totalPag.text = "Total a pagar"
