@@ -69,21 +69,24 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Auxiliar">
+                android:text="Auxiliar"
+                android:id="@+id/Pue1">
 
             </RadioButton>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Albañil">
+                android:text="Albañil"
+                android:id="@+id/Pue2">
 
             </RadioButton>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ing. Obra">
+                android:text="Ing. Obra"
+                android:id="@+id/Pue3">
 
             </RadioButton>
 

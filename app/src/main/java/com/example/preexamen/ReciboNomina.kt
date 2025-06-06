@@ -32,18 +32,18 @@ class ReciboNomina : Serializable {
         return Random.nextInt(0,5000)
     }
 
-    fun CalcularSubtotal(): Float {
+    fun calcularSubtotal(): Float {
         return (pago * horasTrabNormal) + ((pago * 2) * horasTrabExtras)
     }
 
-    fun CalcularImpuestos(): Float {
-        val subtotal = CalcularSubtotal()
+    fun calcularImpuestos(): Float {
+        val subtotal = calcularSubtotal()
         return (subtotal * impuestoPorc) / 100
     }
 
-    fun CalcularTotal(): Float {
-        val subtotal = CalcularSubtotal()
-        val impuesto = CalcularImpuestos()
+    fun calcularTotal(): Float {
+        val subtotal = calcularSubtotal()
+        val impuesto = calcularImpuestos()
         return subtotal - impuesto
     }
 

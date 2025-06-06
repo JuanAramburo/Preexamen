@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnEntrar : Button
     private lateinit var btnSalir : Button
 
-    fun IniciarComponentes(){
+    fun iniciarComponentes(){
         txtEmpleado = findViewById(R.id.txtEmpleado) as EditText
         btnEntrar = findViewById(R.id.btnEntrar) as Button
         btnSalir = findViewById(R.id.btnSalir) as Button
@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        iniciarComponentes()
+        eventosBotones()
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
