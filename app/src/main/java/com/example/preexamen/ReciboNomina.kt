@@ -46,4 +46,5 @@ class ReciboNomina : Serializable {
         val impuesto = CalcularImpuestos()
         return subtotal - impuesto
     }
+
 }

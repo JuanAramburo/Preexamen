@@ -36,14 +36,20 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/horasT">
+            android:hint="@string/horasT"
+            android:id="@+id/horasT"
+            android:paddingBottom="20sp"
+            android:inputType="number">
 
         </EditText>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/horasE">
+            android:hint="@string/horasE"
+            android:id="@+id/horasE"
+            android:paddingBottom="20sp"
+            android:inputType="number">
 
         </EditText>
 
