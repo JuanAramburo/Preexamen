@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Preexamen</string>
+    <string name="titulo">Calculo de pago de nomina</string>
+    <string name="nombre">Nombre</string>
+    <string name="btnEntrar">Entrar</string>
+    <string name="btnSalir">Salir</string>
+    <string name="recibo">Numero de recibo</string>
+    <string name="horasT">Horas trabajadas</string>
+    <string name="horasE">Horas extras</string>
+    <string name="puesto">Puesto</string>
+    <string name="subTotal">Subtotal</string>
+    <string name="impuesto">Impuesto</string>
+    <string name="totalPag">Total a pagar</string>
+    <string name="btnCalcular">Calcular</string>
+    <string name="btnLimpiar">Limpiar</string>
+    <string name="btnRegresar">Regresar</string>
+</resources>
